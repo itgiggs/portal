@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cloudbite-front",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "A:/Projects/wetransfer_project_2026-08-08_1843/project/front", "run", "dev"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}
