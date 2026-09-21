@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-
+import {JSX} from 'react';
 /* =====================================================================
    Icons (inline SVG, no external deps)
    ===================================================================== */
