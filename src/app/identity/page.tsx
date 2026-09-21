@@ -361,7 +361,7 @@ function calculateAge(dob: string): number | null {
    Small reusable field primitives
    ===================================================================== */
 
-function FieldLabel({ icon: Icon, tone, children }: { icon: (props: { className?: string }) => JSX.Element; tone: string; children: React.ReactNode }) {
+function FieldLabel({ icon: Icon, tone, children }: { icon: (props: { className?: string }) => React.JSX.Element; tone: string; children: React.ReactNode }) {
   return (
     <span className="mb-1 flex items-center gap-1.5 text-sm font-semibold text-gray-700">
       <Icon className={`h-4 w-4 ${tone}`} />
@@ -422,7 +422,7 @@ function PillGroup<T extends string>({
 }: {
   value: T;
   onChange: (v: T) => void;
-  options: { value: T; icon?: (props: { className?: string }) => JSX.Element; iconTone?: string }[];
+  options: { value: T; icon?: (props: { className?: string }) => React.JSX.Element; iconTone?: string }[];
 }) {
   return (
     <div className="flex flex-wrap gap-2">
