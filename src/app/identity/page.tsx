@@ -365,7 +365,7 @@ function FieldLabel({ icon: Icon, tone, children }: { icon: (props: { className?
   return (
     <span className="mb-1 flex items-center gap-1.5 text-sm font-semibold text-gray-700">
       <Icon className={`h-4 w-4 ${tone}`} />
-      {children}
+      {children} 
     </span>
   );
 }
