@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { SiteHeader } from "./_components/site-header";
-import { BottomNav } from "./_components/bottom-nav";
-import { getCurrentUser, initialsFor } from "@/lib/auth";
 
 const geistSans = { variable: "--font-geist-sans" };
 
@@ -14,9 +12,7 @@ export const metadata: Metadata = {
   description: "Find your next role, or hire for one.",
 };
 
-export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const user = await getCurrentUser();
-
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
@@ -26,7 +22,6 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         <div className="mx-auto flex w-full min-w-[540px] max-w-[540px] flex-1 flex-col bg-white">
           <SiteHeader />
           {children}
-          <BottomNav user={user ? { initials: initialsFor(user) } : null} />
         </div>
       </body>
     </html>
